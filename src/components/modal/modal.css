@@ -1,0 +1,92 @@
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.3s ease;
+}
+
+.modal__form {
+  position: relative;
+  width: 480px;
+  padding: 40px;
+  border: none;
+  border-radius: 12px;
+  background-color: #fff;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  animation: modal-slide-in 0.4s ease;
+}
+
+@keyframes modal-slide-in {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.modal__title {
+  margin-bottom: 25px;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+.modal__input {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+.modal__input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.modal__tooltip {
+  margin-bottom: 20px;
+  padding-left: 10px;
+  font-size: 14px;
+  color: #c70064;
+}
+
+.modal__tooltip_transparent {
+  color: rgba(199, 0, 100, 0.4);
+}
+
+.modal__btn {
+  display: block;
+  margin: 20px auto 0;
+  padding: 12px 90px;
+  background-color: #007bff;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.modal__btn:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+.modal__btn:active {
+  transform: translateY(1px);
+}
